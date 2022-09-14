@@ -35,6 +35,6 @@ module.exports = class Product {
   }
 
   static fetchAll(cb) {
-    getProductsFromFile(cb);
+    getProductsFromFile(cb);//call back function
   }
 };

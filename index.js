@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const errorController = require('./controllers/error');
 
-//const expressHbs= require("express-handlebars");
+const expressHbs= require("express-handlebars");
 const app = express();
 
 //set template engine hbs
