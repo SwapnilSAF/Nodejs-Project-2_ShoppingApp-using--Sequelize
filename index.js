@@ -12,7 +12,7 @@ const app = express();
     extname: 'hbs'
 }));*/
 app.set("view engine", "ejs");
-app.set("views", "./views"); //providing file path 
+app.set("views", "views"); //providing file path 
 
 const adminData = require('./routes/admin'); //importing the adminRoutes
 const shopRoutes = require('./routes/shop'); // importing the shopeRoutes
