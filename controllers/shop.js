@@ -28,10 +28,10 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
-  Product.findByPk(prodId)
-    .then(([product]) => {
+  Product.findByPk(prodId)  //as from the realese Sequelize V5 => replacing findByID by findByPk which is the latest method 
+    .then((product) => {
       res.render('shop/product-detail', {
-        product: product[0],
+        product: product,
         pageTitle: product.title,
         path: '/products'
       });
