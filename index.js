@@ -31,9 +31,9 @@ app.use(shopRoutes);
 app.use(errorController.get404);
 //next allows the request to continue to the next middleware in line
 
-sequelize.sync().then(result =>{
-    console.log(result);
-    //console.log('Created Product!');
+sequelize.sync().then(result =>{ //here we sync the data to database
+    //console.log(result);
+    console.log('Created Product!');
     app.listen(3000);
 })
 .catch(err =>{
