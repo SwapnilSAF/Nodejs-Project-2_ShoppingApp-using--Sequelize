@@ -1,6 +1,10 @@
 const Sequelize = require('sequelize');
 
-const sequelize = require('../util/database');
+const sequelize = require('../util/database'); //importing sequelize that exporting from database
+
+
+//defining  product model
+//in the argument product name is model name it can be anything
 
 const Product = sequelize.define('product', {
   id: {
@@ -24,4 +28,4 @@ const Product = sequelize.define('product', {
   }
 });
 
-module.exports = Product;
+module.exports = Product; //exporting the module

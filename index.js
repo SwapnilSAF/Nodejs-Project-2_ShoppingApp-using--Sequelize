@@ -2,8 +2,9 @@ const path = require('path'); //it is a core module in nodejs to provide a path
 
 const express = require('express');
 const bodyParser = require('body-parser');
-
 const errorController = require('./controllers/error');
+
+const sequelize=require('./util/database');
 
 //const expressHbs= require("express-handlebars");
 const app = express();
@@ -29,4 +30,15 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 //next allows the request to continue to the next middleware in line
-app.listen(3000);
+
+sequelize.sync().then(result =>{
+    console.log(result);
+    //console.log('Created Product!');
+    app.listen(3000);
+})
+.catch(err =>{
+    console.log(err);
+});
+
+// NOTE=>if i save and run this code again it will not create the the same table again cause IF NOT EXIST 
+

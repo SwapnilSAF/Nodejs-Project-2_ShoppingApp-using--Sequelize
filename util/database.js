@@ -1,8 +1,8 @@
-const Sequelize = require('sequelize');
+const Sequelize = require('sequelize');// importing sequelize
 
 const sequelize = new Sequelize('node-complete', 'root', 'Current-Root-Password', {
-  dialect: 'mysql',
+  dialect: 'mysql', //to be clear that we are connecting to msql database
   host: 'localhost'
-});
+}); //conneting to database
 
-module.exports = sequelize;
+module.exports = sequelize; //export sequelize
