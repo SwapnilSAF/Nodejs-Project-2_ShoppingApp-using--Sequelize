@@ -15,7 +15,7 @@ exports.getProducts = (req, res, next) => {
     console.log(err);
   })}
 
- /* Product.fetchAll()
+ /* Product.fetchAll() //sequelize model dont have fetch all method it will prefer findall method
     .then(([rows, fieldData]) => {
       res.render('shop/product-list', {
         prods: rows,
@@ -39,8 +39,10 @@ exports.getProduct = (req, res, next) => {
     .catch(err => console.log(err));
 };
 
+
+//through the getIndex Method we can fetch all the stored data
 exports.getIndex = (req, res, next) => {
-  Product.findAll()
+  Product.findAll() //as sequelize supports findAll method 
   .then(products => {
     res.render('shop/index', {
       prods: products,
