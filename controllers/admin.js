@@ -1,5 +1,6 @@
 const Product = require('../models/product');
 
+
 exports.getAddProduct = (req, res, next) => {
   res.render('admin/edit-product', {
     pageTitle: 'Add Product',
@@ -8,6 +9,8 @@ exports.getAddProduct = (req, res, next) => {
   });
 };
 
+//next allows the request to continue to the next middleware in line
+
 exports.postAddProduct = (req, res, next) => {
   const title = req.body.title;
   const imageUrl = req.body.imageUrl;
@@ -15,7 +18,7 @@ exports.postAddProduct = (req, res, next) => {
   const description = req.body.description;
   // INSERTING DATA
   Product.create({ //create method instantly create a product than other like Build
-    title: title,
+    title: title, // model:const
     price: price,
     imageUrl: imageUrl,
     description: description

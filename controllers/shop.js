@@ -40,7 +40,7 @@ exports.getProduct = (req, res, next) => {
 };
 
 
-//through the getIndex Method we can fetch all the stored data
+//through the getIndex Method we can fetch/Retriewe all the stored data
 exports.getIndex = (req, res, next) => {
   Product.findAll() //as sequelize supports findAll method 
   .then(products => {

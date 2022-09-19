@@ -9,7 +9,7 @@ const sequelize=require('./util/database');
 //const expressHbs= require("express-handlebars");
 const app = express();
 
-//set template engine hbs
+//set template engine hbs 
 /*app.engine("hbs", expressHbs({
     layoutsDir: 'views/layouts/',
     defaultlayout: 'main-layout',
@@ -29,9 +29,9 @@ app.use('/admin', adminRoutes); //use method allows us to add middleware functio
 app.use(shopRoutes);
 
 app.use(errorController.get404);
-//next allows the request to continue to the next middleware in line
 
-sequelize.sync().then(result =>{ //here we sync the data to database
+
+sequelize.sync().then(result =>{ //here we sync all the model we created to store the data to database
     //console.log(result);
     console.log('Created Product!');
     app.listen(3000);
