@@ -41,4 +41,3 @@ sequelize.sync().then(result =>{ //here we sync all the model we created to stor
 });
 
 // NOTE=>if i save and run this code again it will not create the the same table again cause IF NOT EXIST 
-
