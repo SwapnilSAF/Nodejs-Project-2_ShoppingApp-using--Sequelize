@@ -34,7 +34,7 @@ app.use(errorController.get404);
 sequelize.sync().then(result =>{ //here we sync all the model we created to store the data to database
     //console.log(result);
     console.log('Created Product!');
-    app.listen(3000);
+    app.listen(7000);
 })
 .catch(err =>{
     console.log(err);
